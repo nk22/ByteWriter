@@ -1,0 +1,24 @@
+ByteWriter 0.0.0 is a tool written to get the job done.  That job?  Convert raw binary data on your harddrive into eye popping pixels!  Things are a bit rough but you'll get the hang of it.  Basically raw data is packaged into "bytes" of a user defined size.  The packaged "bytes" are treated as RGB channel values which are then rendered into a 24-bit color space (scaling to 0-255 is done for you)
+
+Disclaimer: Use at your own risk.  This program is VERY memory intensive.  Recommended not to load files of greater than 30MB.  Be responsible and split your files first.
+
+Cool.  What else?
+
+Choose how many bits get converted into RGB values for each channel.  These are set up top in the variable declaration as bRed, bGreen, and bBlue.  Currently only supports values 0-8.  Yes, you can set two channels to 0 and one channel to 1 for raw binary visualization.  You can always index and change the color in post production.
+
+Export to TIFF!  This is done so automatically (you can disable if you want) and the naming convention is such that your rendering choices get written into the saved file name.
+
+Set image width.  Based on this, the image length is set so that the whole file is rendered.  If you don't want this to happen, you'll have to set the imgLength and change the reference in the size() function to call it.
+
+
+TODO:
+Implement Grayscale mode
+Alpha Channel
+Line Swaps/Interlacing
+Channel Swaps
+Bit Skipping
+Offset
+
+Loads of other cool things I wanted to do at the time but can't remember now.
+
+Have fun!
